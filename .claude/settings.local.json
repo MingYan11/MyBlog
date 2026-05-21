@@ -25,7 +25,9 @@
       "Bash(curl -s http://localhost:4000)",
       "Bash(curl -sL -o /dev/null -w '%{url_effective}' http://localhost:4000)",
       "Bash(curl -sL http://localhost:4000)",
-      "Bash(kill %1)"
+      "Bash(kill %1)",
+      "Bash(npx hexo *)",
+      "Bash(pnpm remove *)"
     ]
   }
 }

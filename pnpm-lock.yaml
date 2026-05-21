@@ -44,9 +44,6 @@ importers:
       hexo-theme-landscape:
         specifier: ^1.0.0
         version: 1.1.0
-      hexo-word-counter:
-        specifier: ^0.2.2
-        version: 0.2.2
 
 packages:
 
@@ -189,10 +186,6 @@ packages:
 
   camel-case@4.1.2:
     resolution: {integrity: sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==}
-
-  cargo-cp-artifact@0.1.9:
-    resolution: {integrity: sha512-6F+UYzTaGB+awsTXg0uSJA1/b/B3DDJzpKVRu0UmyI7DmNeaAl2RFHuTGIN6fEgpadRxoXGb7gbC1xo4C3IdyA==}
-    hasBin: true
 
   character-parser@2.2.0:
     resolution: {integrity: sha512-+UqJQjFEFaTAs3bNsF2j2kEN1baG/zghZbdqoYEDxGZtJo9LBzl1A+m0D4n3qKx8N2FNv8/Xp6yV9mQmBuptaw==}
@@ -517,9 +510,6 @@ packages:
   hexo-util@4.0.0:
     resolution: {integrity: sha512-oXKXBs1HZ2Wu/eq0paAVqtCmAEcqJPZ4xxSVRuwAplm1hFU41Ul53WA5bmYMEz9Dp+OJ/SdchjXRmYlbGJdt3w==}
     engines: {node: '>=18'}
-
-  hexo-word-counter@0.2.2:
-    resolution: {integrity: sha512-ga/0MbBlN/Xu8I6orRKpYJ/z4aNe3U4honCwBePna8e5gTEeHeF4COs3u4U9x041p8OApFiWQxhYoNOqieEwYw==}
 
   hexo@8.1.2:
     resolution: {integrity: sha512-gmpNwL1KnbK12q551ZhGxqvSw8M88ZSjFKOhx6ybUYz1phjPdwGewMgBgwGmjcVcIYFq6tWQAv1MRil/sBrPHQ==}
@@ -1198,8 +1188,6 @@ snapshots:
       pascal-case: 3.1.2
       tslib: 2.8.1
 
-  cargo-cp-artifact@0.1.9: {}
-
   character-parser@2.2.0:
     dependencies:
       is-regex: 1.2.1
@@ -1578,10 +1566,6 @@ snapshots:
       htmlparser2: 10.1.0
       prismjs: 1.30.0
       strip-indent: 3.0.0
-
-  hexo-word-counter@0.2.2:
-    dependencies:
-      cargo-cp-artifact: 0.1.9
 
   hexo@8.1.2(chokidar@3.6.0):
     dependencies:
