@@ -1,0 +1,53 @@
+/* 首页 banner 渐变背景 */
+#page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#page-header::before {
+  background: none !important;
+}
+
+/* banner 标题样式 */
+#site-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* banner 副标题 */
+#site-subtitle {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+/* 打字效果光标 */
+#subtitle .typed-cursor {
+  opacity: 0.8;
+}
+
+/* 向下滚动指示器 */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.scroll-down i {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}

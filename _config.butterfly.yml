@@ -1,4 +1,24 @@
 # --------------------------------------
+# Index Page Banner 首页大图
+# --------------------------------------
+# Banner height
+index_top_img_height: 400px
+
+# Site info vertical position (higher = closer to top)
+index_site_info_top: 40%
+
+# Subtitle typing effect
+subtitle:
+  enable: true
+  effect: true
+  loop: true
+  source: false
+  sub:
+    - 记录前端技术，分享工程实践
+    - 专注于 JavaScript / React / Vue
+    - 热爱技术，持续学习
+
+# --------------------------------------
 # Navigation 导航菜单
 # --------------------------------------
 menu:
@@ -129,3 +149,12 @@ comments:
   use:
   text: true
   lazyload: true
+
+# --------------------------------------
+# Inject 自定义资源
+# --------------------------------------
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css">
+  bottom:
+    - <script>document.getElementById("page-header") && document.getElementById("page-header").insertAdjacentHTML("beforeend",'<div class="scroll-down" onclick="window.scrollTo({top:window.innerHeight-60,behavior:\'smooth\'})"><i class="fas fa-chevron-down"></i></div>');</script>

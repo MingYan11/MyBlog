@@ -27,7 +27,11 @@
       "Bash(curl -sL http://localhost:4000)",
       "Bash(kill %1)",
       "Bash(npx hexo *)",
-      "Bash(pnpm remove *)"
+      "Bash(pnpm remove *)",
+      "Bash(curl -s http://localhost:4000/MyBlog/)",
+      "Bash(lsof -ti:4000)",
+      "Bash(xargs kill -9)",
+      "Bash(kill %1 %2)"
     ]
   }
 }
