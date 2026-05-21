@@ -5,7 +5,7 @@ tags: [前端, 面试, Vue]
 categories: 前端面试
 ---
 
-### 生命周期
+## 生命周期
 
 - Vue3/Vue2 生命周期钩子对比:
   - setup（beforeCreate之后/created之前）：在组件实例创建（beforeCreate是之前，created是创建完成）被调用，用于设置组件的响应式数据和方法。
@@ -32,7 +32,7 @@ categories: 前端面试
     - 客户端渲染（CSR）:onMounted（确保DOM可用）
     - 服务端渲染（SSR）:setup（onServerPrefetch）或onMounted（根据需求）
 
-### 组件通信
+## 组件通信
 
 - 父向子：props、属性透传（$attr）、ref/expose（实例、DOM）。
 - 子向父：$emit 触发事件。
@@ -42,7 +42,7 @@ categories: 前端面试
   - 使用全局事件总线（Event Bus）或状态管理库（如 Vuex）来实现跨组件通信。
 - 跨层级通信：provide/inject、Vuex/Pinia、Event Bus（vueuse的useEventBus）。
 
-### 事件修饰符
+## 事件修饰符
 
 - 事件修饰符
   - .stop：阻止事件冒泡。
@@ -62,7 +62,7 @@ categories: 前端面试
   - .right：监听鼠标右键。
   - .middle：监听鼠标中键。
 
-### 指令
+## 指令
 
 - v-show：通过切换元素的 display 样式来控制元素的显示和隐藏，元素始终存在于 DOM 中。
 - v-if：根据条件渲染元素，元素在条件为 false 时被完全移除 DOM。
@@ -77,7 +77,7 @@ categories: 前端面试
 - v-cloak：在 Vue 编译完成之前保持元素的可见性，常用于防止闪烁。
 - v-once：只渲染元素和组件一次，之后不再更新。
 
-### ref和reactive区别
+## ref和reactive区别
 
 | 特性         | `ref`                                         | `reactive`                          |
 | ------------ | --------------------------------------------- | ----------------------------------- |
@@ -122,7 +122,7 @@ categories: 前端面试
 
 - 对象类型：reactive性能更好，ref需要内部转化为reactive代理（性能差异不大）。
 
-### 插槽
+## 插槽
 
 - 作用：插槽（Slot）是 Vue 提供的一种机制，用于在组件中预留位置，让父组件可以向子组件传递内容，实现组件的灵活组合和复用。
 - 分类：
@@ -135,7 +135,7 @@ categories: 前端面试
 <template #[dynamicSlotName]>动态插槽内容</template>
 ```
 
-### watch、watchEffect、computed的区别
+## watch、watchEffect、computed的区别
 
 | 特性       | `computed`                         | `watch`                                | `watchEffect`                        |
 | ---------- | ---------------------------------- | -------------------------------------- | ------------------------------------ |
@@ -164,7 +164,7 @@ const stop = watch(
 stop();
 ```
 
-### keep-alive
+## keep-alive
 
 - include：字符串或正则表达式以及数组，匹配的组件会被缓存。
 - exclude：字符串或正则表达式以及数组，匹配的组件不会被缓存。
@@ -184,7 +184,7 @@ stop();
 - SSR不兼容：keep-alive仅在客户端渲染中生效
 - 缓存组件的状态保留：表单内容等会被保留，需手动重置或通过key强制更新
 
-### 异步组件
+## 异步组件
 
 **原理**
 
@@ -227,7 +227,7 @@ const AsyncComp = defineAsyncComponent({
 - 按需加载：减少初始包体积，提升首屏加载速度
 - 性能优化：结合代码分割（Code Spliting）动态加载非关键组件
 
-### Vue-Router
+## Vue-Router
 
 **创建路由实例**
 
@@ -286,7 +286,7 @@ router.push({ name: "user", params: { id: 1 } });
 { path: '/', alias: 'home' }
 ```
 
-### 导航守卫
+## 导航守卫
 
 **全局守卫**
 
@@ -334,7 +334,7 @@ router.push({ name: "user", params: { id: 1 } });
 - 组合式API支持（useRouter/useRoute）
 - 动态路由API优化（addRoute/removeRoute）
 
-### 状态管理
+## 状态管理
 
 **Vuex**
 
@@ -364,9 +364,9 @@ router.push({ name: "user", params: { id: 1 } });
   - Pinia基于模块化设计（每个Store独立），无需嵌套模块
   - 更简洁的API和TypeScript支持
 
-### 性能优化
+## 性能优化
 
-#### 组件级优化策略
+### 组件级优化策略
 
 **渲染控制**
 
@@ -380,13 +380,13 @@ router.push({ name: "user", params: { id: 1 } });
   怎么分析？可以通过Vue Devtools观察组件的更新频率和性能瓶颈，识别出哪些组件频繁更新，哪些组件状态变化较大，从而决定如何拆分组件。
 - 异步组件：延迟加载非关键组件
 
-#### 状态管理优化
+### 状态管理优化
 
 - shallowRef/shalloReactive：非深度响应式数据
   - shallowRef: 只对 最外层对象本身是响应式的，内部属性不会被递归响应化。一些大对象且不需要关心其内层，比如webSocket
 - 使用markRaw避免不必要的响应式
 
-#### 资源与加载优化
+### 资源与加载优化
 
 **代码分割：按需加载组件和库**
 
@@ -407,7 +407,7 @@ router.push({ name: "user", params: { id: 1 } });
 <link rel="preload" href="critical.css" as="style" />
 ```
 
-#### 运行时性能优化
+### 运行时性能优化
 
 **列表渲染优化**
 
@@ -425,7 +425,7 @@ router.push({ name: "user", params: { id: 1 } });
 - 高频事件使用防抖/节流：减少事件处理频率，提升性能。
 - 使用事件修饰符（如.passive）提升滚动性能。
 
-#### 架构级优化
+### 架构级优化
 
 **服务端渲染（SSR）**
 
@@ -448,7 +448,7 @@ location /assets {
 
 ```
 
-#### 工具链优化
+### 工具链优化
 
 **现代构建工具**
 
@@ -472,7 +472,7 @@ location /assets {
 - Vue DevTools 性能追踪
 - Lighthouse 性能评分
 
-#### 面试
+### 面试
 
 **Vue3比Vue2快在哪里？**
 
@@ -487,9 +487,9 @@ location /assets {
 - 复杂表单优化
 - 重复渲染的子组件
 
-### Vue2和Vue3区别
+## Vue2和Vue3区别
 
-#### 架构设计区别
+### 架构设计区别
 
 | 特性           | Vue2                    | Vue3              | 优势                                |
 | -------------- | ----------------------- | ----------------- | ----------------------------------- |
@@ -498,19 +498,19 @@ location /assets {
 | **源码组织**   | Flow 类型系统           | TypeScript 重写   | 更好的类型支持和源码可维护性        |
 | **包体积**     | 全量引入（22.5kb）      | 按需引入（<10kb） | Tree Shaking 减少 41% 体积          |
 
-#### 响应式系统升级
+### 响应式系统升级
 
 - Vue2：基于 `Object.defineProperty` 实现响应式，无法监听新增属性和数组索引。
 - Vue3：基于 `Proxy` 实现响应式，支持监听对象的所有属性和数组索引，性能更优。
   - 原理：Vue3使用Proxy代理（惰性递归）整个对象，拦截get/set操作，实现响应式。相比Vue2的defineProperty需要递归处理每个属性，Proxy更高效。
 
-#### Composition API vs Options API
+### Composition API vs Options API
 
 - Options API：通过data、methods、computed等选项组织代码，适合小型组件，但逻辑复用较困难。
 - Composition API：通过setup函数组织代码，使用ref/reactive定义响应式数据，适合大型组件，逻辑复用更灵活。
   - 优势：更好的逻辑复用（通过组合函数），更好的类型推导（TypeScript支持），更清晰的代码结构（将相关逻辑放在一起）。
 
-#### 性能优化对比
+### 性能优化对比
 
 | 优化点               | Vue2                               | Vue3                                       |
 | -------------------- | ---------------------------------- | ------------------------------------------ |
@@ -520,13 +520,13 @@ location /assets {
 | **组件设计优化**     | Options API，逻辑复用较困难        | Composition API，逻辑复用更灵活            |
 | **静态提升**         | 不支持，所有节点每次渲染都需要处理 | 支持，静态节点提升到编译时，减少运行时开销 |
 
-#### 新特性与API
+### 新特性与API
 
 - **Teleport**：允许将组件渲染到 DOM 的任意位置，提升灵活性。
 - **Suspense（异步组件）**：统一管理异步组件的加载状态，提升用户体验。
 - **Fragments（碎片）**：组件可以返回多个根节点，减少不必要的 DOM 层级。
 
-#### 面试
+### 面试
 
 **Vue3的模版编译优化有哪些？**
 
@@ -540,13 +540,13 @@ location /assets {
 - 逐步替换废弃API（$children,filters等）
 - 优先迁移新组件，逐步重构旧组件
 
-### SPA
+## SPA
 
 **定义**：整个应用只有一个HTML文件，通过动态替换DOM内容实现"页面"切换。
 **优点**：无刷新跳转，前后端分离开发，减轻服务器渲染压力。
 **缺点**：首屏加载慢，SEO不友好，路由管理复杂度
 
-#### SPA与MPA对比
+### SPA与MPA对比
 
 | 特性           | SPA                          | MPA (多页面应用)     |
 | -------------- | ---------------------------- | -------------------- |
@@ -556,7 +556,7 @@ location /assets {
 | **开发复杂度** | 高（需前端路由、状态管理等） | 低                   |
 | **SEO 支持**   | 差（需额外优化）             | 优                   |
 
-#### 面试
+### 面试
 
 **SPA首屏加载优化有哪些方案？**
 
@@ -591,16 +591,16 @@ location /assets {
 - 静态站点生成（SSG）：
   - 预渲染所有页面为静态HTML，适合博客、文档等内容较少变动的站点。
 
-### 其他
+## 其他
 
-#### nextTick
+### nextTick
 
 - Vue 的 数据更新是异步的，nextTick用于在 DOM 更新完成后执行回调函数。它确保在数据变化后，所有相关的 DOM 更新都已经完成，适合在更新后访问或操作 DOM。
 - 使用场景：
   - 在数据更新后需要访问更新后的 DOM 元素。
   - 在组件更新后执行某些操作，如滚动到特定位置。
 
-#### Hook 和工具函数怎么区分
+### Hook 和工具函数怎么区分
 
 ```
 “我的划分标准是看它是否依赖 Vue 的响应式能力和生命周期。依赖 ref、computed、watch、onMounted 这类能力的，我会抽成 Hook；如果只是纯函数计算、格式化、转换、对象处理，就放到工具包里。这样职责更清晰，也方便测试和复用。”

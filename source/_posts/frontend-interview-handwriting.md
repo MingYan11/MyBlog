@@ -61,7 +61,7 @@ function limitConcurrency(tasks, limit) {
 
 ## hooks
 
-#### socket
+### socket
 
 ```js
 // wssUrl: wss://api.spinman.app
@@ -94,7 +94,7 @@ const socket = shallowRef<AdminBalanceSocket | null>(null);
 socket.value = createNotifySocket();
 ```
 
-#### queue
+### queue
 
 ```js
 export function useQueue(
@@ -148,7 +148,7 @@ function updateList(item) {
 }
 ```
 
-#### 分页 usePaginationList
+### 分页 usePaginationList
 
 ```js
 export function usePaginationList(

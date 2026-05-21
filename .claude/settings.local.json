@@ -9,7 +9,14 @@
       "Bash(git push *)",
       "Bash(gh run *)",
       "Bash(gh api *)",
-      "WebFetch(domain:mingyan11.github.io)"
+      "WebFetch(domain:mingyan11.github.io)",
+      "Bash(sed -i '' '8,$s/^### /## /' frontend-interview-js.md)",
+      "Bash(sed -i '' '8,$s/^### /## /' frontend-interview-http-browser.md)",
+      "Bash(sed -i '' '8,$s/^#### /### /' frontend-interview-vue.md)",
+      "Bash(sed -i '' '8,$s/^### /## /' frontend-interview-vue.md)",
+      "Bash(sed -i '' '8,$s/^#### /### /' frontend-interview-handwriting.md)",
+      "Bash(awk ' *)",
+      "Bash(grep -E '组件级优化|状态管理优化|资源与加载|运行时性能|架构级优化|工具链优化|面试$')"
     ]
   }
 }
