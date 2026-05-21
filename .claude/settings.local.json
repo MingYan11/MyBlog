@@ -16,7 +16,16 @@
       "Bash(sed -i '' '8,$s/^### /## /' frontend-interview-vue.md)",
       "Bash(sed -i '' '8,$s/^#### /### /' frontend-interview-handwriting.md)",
       "Bash(awk ' *)",
-      "Bash(grep -E '组件级优化|状态管理优化|资源与加载|运行时性能|架构级优化|工具链优化|面试$')"
+      "Bash(grep -E '组件级优化|状态管理优化|资源与加载|运行时性能|架构级优化|工具链优化|面试$')",
+      "Bash(npm install *)",
+      "Bash(pnpm add *)",
+      "Bash(pnpm clean *)",
+      "Bash(pnpm build *)",
+      "Bash(pnpm server *)",
+      "Bash(curl -s http://localhost:4000)",
+      "Bash(curl -sL -o /dev/null -w '%{url_effective}' http://localhost:4000)",
+      "Bash(curl -sL http://localhost:4000)",
+      "Bash(kill %1)"
     ]
   }
 }
