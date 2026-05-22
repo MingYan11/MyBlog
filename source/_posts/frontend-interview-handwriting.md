@@ -59,6 +59,17 @@ function limitConcurrency(tasks, limit) {
 
 ## 手写 new 操作符实现
 
+```js
+function myNew(Constructor, ...args) {
+  // 创建新对象，原型指向构造函数的prototype
+  const obj = Object.create(Constructor.prototype); 
+  // 执行构造函数，传入新对象作为this
+  const result = Constructor.apply(obj, args); 
+  // 返回构造函数返回的对象或新对象
+  return typeof result === 'object' && result !== null ? result : obj; 
+}
+```
+
 ## hooks
 
 ### socket
