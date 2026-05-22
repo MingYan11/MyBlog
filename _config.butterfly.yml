@@ -158,3 +158,21 @@ inject:
     - <link rel="stylesheet" href="/css/custom.css">
   bottom:
     - <script>document.getElementById("page-header") && document.getElementById("page-header").insertAdjacentHTML("beforeend",'<div class="scroll-down" onclick="window.scrollTo({top:window.innerHeight-60,behavior:\'smooth\'})"><i class="fas fa-chevron-down"></i></div>');</script>
+
+# --------------------------------------
+# SEO / Verification 站点验证
+# --------------------------------------
+# 去 Google Search Console / 百度站长平台 添加站点后获取验证码填入
+
+site_verification:
+  - name: google-site-verification
+    content: 7jq_fkQ5dw4-hJNVJVwf6KilbEuxVwEnIiNC2WgqdGk
+  # - name: baidu-site-verification
+  #   content: xxxxxxx
+
+# Structured Data 结构化数据（帮助搜索引擎理解页面内容）
+structured_data:
+  enable: true
+  alternate_name:
+    - Yan Ming's Blog
+    - 严明博客
