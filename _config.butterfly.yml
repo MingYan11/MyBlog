@@ -37,8 +37,7 @@ highlight_theme: mac
 # Social Settings 社交链接
 # --------------------------------------
 social:
-  fas fa-rss: /atom.xml || RSS
-  fab fa-github: https://github.com/MingYan11 || GitHub
+  fab fa-github: https://github.com/yanming-lab || GitHub
 
 # --------------------------------------
 # Avatar 头像
@@ -112,7 +111,7 @@ aside:
       enable: true
       icon: fab fa-github
       text: GitHub
-      link: https://github.com/MingYan11
+      link: https://github.com/yanming-lab
   card_announcement:
     enable: true
     content: 分享前端技术、工程化实践与面试经验
